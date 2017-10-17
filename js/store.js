@@ -125,16 +125,18 @@
 		var todoId;
 		
 		for (var i = 0; i < todos.length; i++) {
-			if (todos[i].id == id) {
+			if (todos[i].id === id) { //changed to === instead of ==
 				todoId = todos[i].id;
+                todos.splice(i, 1); //removed from below and added here
+
 			}
 		}
 
-		for (var i = 0; i < todos.length; i++) {
-			if (todos[i].id == todoId) {
+		/*for (var i = 0; i < todos.length; i++) {
+			if (todos[i].id === todoId) { //changed to === instead of ==
 				todos.splice(i, 1);
 			}
-		}
+		}*/
 
 		localStorage[this._dbName] = JSON.stringify(data);
 		callback.call(this, todos);
