@@ -14,7 +14,7 @@
 npm install
 open index.html in any browser
 ```
-![Screenshot](screenShot.png)
+![Screenshot](ScreenShot.png)
 
 ### Example Code
 ```javascript
