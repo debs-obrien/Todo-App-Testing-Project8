@@ -62,11 +62,11 @@ describe('controller', function () {
 		// TODO: write test
 
         let todo = {}; //on start todos are empty
-        setUpModel([todo]); //setsup the model
+        setUpModel([todo]); //sets up the model
 
         subject.setView(''); //set the view
 
-        //expects the view to render with showEntries and the empty arrayb
+        //expects the view to render with showEntries and the empty array
         expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 
 	});
@@ -191,10 +191,6 @@ describe('controller', function () {
 
         subject.setView('');
         expect(view.render).toHaveBeenCalledWith('setFilter', currentPage);
-        expect(currentPage).toEqual('');
-        //expect(window.document.querySelector('.filters [href="#/' + currentPage + '"]').className).toEqual('selected');
-        //expect(className).toEqual('selected')
-
 	});
 
 	it('should highlight "Active" filter when switching to active view', function () {
@@ -210,9 +206,6 @@ describe('controller', function () {
 
         subject.setView('#/active');
         expect(view.render).toHaveBeenCalledWith('setFilter', currentPage);
-        expect(currentPage).toEqual('active');
-        //expect(className).toEqual('selected');
-
 	});
 
 	describe('toggle all', function () {
@@ -254,7 +247,6 @@ describe('controller', function () {
 	describe('new todo', function () {
 		it('should add a new todo to the model', function () {
 			// TODO: write test
-			// similar to below
             setUpModel([]);
 
             subject.setView('');
