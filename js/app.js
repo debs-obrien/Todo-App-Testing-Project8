@@ -16,7 +16,6 @@
 	}
 
 	var todo = new Todo('todos-vanillajs');
-
 	function setView() {
 		todo.controller.setView(document.location.hash);
 	}

@@ -126,7 +126,7 @@
 		
 		for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id === id) { //changed to === instead of ==
-				todoId = todos[i].id;
+				//todoId = todos[i].id;
                 todos.splice(i, 1); //removed from below and added here
 
 			}
