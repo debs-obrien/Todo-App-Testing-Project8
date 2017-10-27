@@ -122,16 +122,17 @@
 	Store.prototype.remove = function (id, callback) {
 		var data = JSON.parse(localStorage[this._dbName]);
 		var todos = data.todos;
-		var todoId;
+		//var todoId; //not needed
 		
 		for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id === id) { //changed to === instead of ==
-				//todoId = todos[i].id;
+				//todoId = todos[i].id; //not needed
                 todos.splice(i, 1); //removed from below and added here
+				break; //break to break out of for look
 
 			}
 		}
-
+		//not needed seems like duplicate code doing nothing
 		/*for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id === todoId) { //changed to === instead of ==
 				todos.splice(i, 1);

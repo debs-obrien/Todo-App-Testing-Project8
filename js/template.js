@@ -40,6 +40,7 @@
 		+	'</li>';
 	}
 
+
 	/**
 	 * Creates an <li> HTML string and returns it for placement in your app.
 	 *
@@ -58,10 +59,10 @@
 	 * });
 	 */
 	Template.prototype.show = function (data) {
-		var i, l;
+		//var i, l; modified the for below to not need these vars
 		var view = '';
 
-		for (i = 0, l = data.length; i < l; i++) {
+		for (let i = 0; i < data.length; i++) {
 			var template = this.defaultTemplate;
 			var completed = '';
 			var checked = '';

@@ -122,13 +122,14 @@
 	Controller.prototype.editItemSave = function (id, title) {
 		var self = this;
 
-		while (title[0] === " ") {
+		//while block not necessary while title[0] is strict equal to an empty space
+		/*while (title[0] === " ") {
 			title = title.slice(1);
 		}
-
+		//while block not necessary while title[title.length-1] is strict equal to an empty space
 		while (title[title.length-1] === " ") {
 			title = title.slice(0, -1);
-		}
+		}*/
 
 		if (title.length !== 0) {
 			self.model.update(id, {title: title}, function () {
@@ -158,10 +159,13 @@
 	 */
 	Controller.prototype.removeItem = function (id) {
 		var self = this;
-		var items;
+
+		//not needed as it doesnt seem to be doing anything
+		//think it was just here so it could run the forEach for the console.log
+		/*var items;
 		self.model.read(function(data) {
 			items = data;
-		});
+		});*/
 
 		//console.log can be removed
 		/*items.forEach(function(item) {
