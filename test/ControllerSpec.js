@@ -296,9 +296,9 @@ describe('controller', function () {
 	describe('element removal', function () {
 		it('should remove an entry from the model', function () {
 			// TODO: write test
-			//think this one is ok removes an entry if it is completed or not
 
             var todo = {id: 21, title: 'my todo', completed: true};
+            
             setUpModel([todo]);
             subject.setView('');
 
