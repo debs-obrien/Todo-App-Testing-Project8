@@ -298,7 +298,7 @@ describe('controller', function () {
 			// TODO: write test
 
             var todo = {id: 21, title: 'my todo', completed: true};
-            
+
             setUpModel([todo]);
             subject.setView('');
 
