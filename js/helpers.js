@@ -12,7 +12,7 @@
 
 	// addEventListener wrapper:
 	window.$on = function (target, type, callback, useCapture) {
-		target.addEventListener(type, callback, !!useCapture); //remove !! from before useCapture
+		target.addEventListener(type, callback, !!useCapture);
 	};
 
 	// Attach a handler to event for all elements that match the selector,
